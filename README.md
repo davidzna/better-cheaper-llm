@@ -45,7 +45,11 @@ Probably not, if:
 
 ## Getting started
 
-better-cheaper-llm isn't on PyPI yet, so install it from GitHub:
+```bash
+pip install better-cheaper-llm
+```
+
+The sample pipeline and the benchmark live in the repo, so to try them, clone it:
 
 ```bash
 git clone https://github.com/davidzna/better-cheaper-llm
@@ -153,7 +157,7 @@ The report has three parts:
 - the sites that are really decisions: short answers from a small repeated set, like yes/no or a route name;
 - RAG prompts where retrieved passages were probably never used. That's a lexical guess: a passage counts as used if the answer cites it or shares wording with it.
 
-Pass `--prices` (see [examples/prices.json](examples/prices.json)) to get dollars instead of just tokens. The savings it shows are upper bounds. `replay` tells you how much of that is real.
+Pass `--prices` (see [examples/prices.json](https://github.com/davidzna/better-cheaper-llm/blob/main/examples/prices.json)) to get dollars instead of just tokens. The savings it shows are upper bounds. `replay` tells you how much of that is real.
 
 ## Replaying decisions
 
@@ -215,7 +219,7 @@ On the sample eval set (120 rows: each answer as written, with one fact changed,
 
 ## How fast is it?
 
-[examples/speed_benchmark.py](examples/speed_benchmark.py) sends identical decisions to Jev and to OpenAI models, one call at a time from the same laptop:
+[examples/speed_benchmark.py](https://github.com/davidzna/better-cheaper-llm/blob/main/examples/speed_benchmark.py) sends identical decisions to Jev and to OpenAI models, one call at a time from the same laptop:
 
 | | Jev | GPT-5.4 nano | GPT-6 Astra | o4-mini |
 |---|---:|---:|---:|---:|
@@ -254,4 +258,4 @@ uv run pytest
 
 ## License
 
-Apache-2.0. See [LICENSE](LICENSE).
+Apache-2.0. See [LICENSE](https://github.com/davidzna/better-cheaper-llm/blob/main/LICENSE).
