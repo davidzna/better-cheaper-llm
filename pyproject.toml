@@ -1,0 +1,48 @@
+[project]
+name = "better-cheaper-llm"
+version = "0.1.0"
+description = "Use Jev instead of an LLM for RAG decisions: relevance grading, query routing, hallucination checks and LLM-as-a-judge evals. Faster, cheaper, measured first."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    { name = "davidzna", email = "london.story@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+keywords = [
+    "rag", "llm", "retrieval-augmented-generation", "llm-evaluation", "llm-as-a-judge",
+    "hallucination-detection", "groundedness", "cost-optimization", "latency", "llmops",
+    "guardrails", "jev", "typesafe", "system-one",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/davidzna/better-cheaper-llm"
+Repository = "https://github.com/davidzna/better-cheaper-llm"
+Issues = "https://github.com/davidzna/better-cheaper-llm/issues"
+
+[project.scripts]
+better-cheaper-llm = "better_cheaper_llm.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.2,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
